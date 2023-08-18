@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .conteudo {
+      position: relative;
+      width: 100%;
+      display: grid;
+      text-align: center;
+      justify-content: center;
+    }
+
+    img {
+      width: 600px;
+      height: 500px;
+      margin: 0px auto;
+    }
+
+    .content-text {}
+
+    .modal {
+      align-self: center;
+      justify-self: center;
+      display: grid;
+      grid-template-rows: 1fr 1fr 1fr;
+      position: absolute;
+      background-color: #fffbeafb;
+      margin: 0px;
+      width: 500px;
+      height: 500px;
+      margin-top: 5%;
+      border-radius: 7%;
+      transition: transform 1s ease-in-out;
+      opacity: 0;
+      z-index: -999;
+      transform: scale(0.2);
+    }
+
+    .modal-text {
+      text-align: center;
+      text-wrap: nowrap;
+      align-self: center;
+      grid-row-start: 2;
+      grid-row-end: 3;
+      margin: 0px;
+    }
+
+    .is-active {
+      z-index: 99999;
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    @media screen and (max-width: 768px) {
+      img {
+        width: 350px;
+        height: 270px;
+      }
+
+      .modal {
+        font-weight: 200;
+        width: min-content;
+        height: 270px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+
+  </div>
+  <div class="conteudo">
+    <h1 class="content-text">Toque no dromedário</h1>
+    <img onclick="showModal()" src="dromedario.png" alt="dromedario">
+    <div id="modal" class="modal">
+      <h1 class="modal-text">meu cu no teu caraliokkkk</h1>
+    </div>
+  </div>
+
+
+  <script>
+    function showModal() {
+      const modal = document.getElementById('modal');
+
+      modal.classList.add('is-active');
+    }
+  </script>
+</body>
+
+</html>
